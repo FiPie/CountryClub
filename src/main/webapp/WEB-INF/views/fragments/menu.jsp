@@ -19,15 +19,16 @@
       crossorigin="anonymous">  <%--ikonki budzika, ptaszka, facebooka etc.--%>
 <link href="https://fonts.googleapis.com/css?family=Charmonman:400,700|Open+Sans:400,600,700&amp;subset=latin-ext"
       rel="stylesheet">
-<header class="page-header">
+<header class="page-header" style="background-color: rgba(223,217,190,0.47);
+            border-radius: 10px;">
     <nav class="navbar navbar-expand-lg justify-content-around">
         <div>
             <ol class="nav nounderline text-uppercase">
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
-                    <a class="nav-link color-header" href="/" style="text-decoration:none">Strona główna</a>
+                    <a class="nav-link color-header" href="/" style="text-decoration:none">Homepage</a>
                 </li>
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
-                    <a class="nav-link color-header" href="/" style="text-decoration:none">O Nas</a>
+                    <a class="nav-link color-header" href="/about" style="text-decoration:none">O Nas</a>
                 </li>
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
                     <a class="nav-link color-header" href="/register" style="text-decoration:none">Rejestracja</a>
@@ -36,10 +37,10 @@
                     <a class="nav-link color-header" href="/reservation" style="text-decoration:none">Zarezerwuj Dolek</a>
                 </li>
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
-                    <a class="nav-link color-header" href="/" style="text-decoration:none">Kontakt</a>
+                    <a class="nav-link color-header" href="/contact" style="text-decoration:none">Kontakt</a>
                 </li>
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
-                    <a class="nav-link color-header" href="/" style="text-decoration:none">Aktualnosci</a>
+                    <a class="nav-link color-header" href="/news" style="text-decoration:none">Aktualnosci</a>
                 </li>
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
                     <a class="nav-link color-header" href="/message" style="text-decoration:none">Message</a>

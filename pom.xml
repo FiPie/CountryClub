@@ -11,7 +11,10 @@
     <groupId>com.f.piechowiak.spring</groupId>
     <artifactId>countryclub</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>countryclub</name>
+    <name>countryclub01</name>
+
+    <packaging>war</packaging>
+
     <description>Demo project for Spring Boot</description>
 
 
@@ -79,12 +82,33 @@
     </dependencies>
 
     <build>
+        <finalName>countryclub01</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>2.0.6</version>
+                <configuration>
+                    <appName>countryclub01</appName>
+                    <includeTarget>false</includeTarget>
+                    <includes>
+                        <include>target/${project.build.finalName}.war</include>
+                    </includes>
+                    <jdkVersion>${java.version}</jdkVersion>
+                    <processTypes>
+                        <web>java $JAVA_OPTS -jar target/${project.build.finalName}.war</web>
+                    </processTypes>
+                </configuration>
+            </plugin>
+
         </plugins>
+
+
         <resources>
             <resource>
                 <directory>

@@ -12,6 +12,19 @@
 <html>
 <head>
     <title>Wiadomosci</title>
+    <style>
+        body {
+            background-image: url("http://irishgolfbreaks.com/site/assets/files/1133/mktdrv_070301_012rgb.jpeg");
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+
+        .bunker {
+            background-color: rgba(149, 172, 223, 0.49);
+            border-radius: 15px;
+        }
+
+    </style>
 </head>
 <body>
 <jsp:include page="fragments/menu.jsp"/>
@@ -19,18 +32,32 @@
 <c:if test="${param['error'] != null}">
     <p>Błędny adresat</p>
 </c:if>
+<div>
+    <div align="center">
+        <table class="bunker">
+            <tr>
+                <td>
+                    <form:form align="center" modelAttribute="messageForm" method="post">
+                        <p align="center">Wprowadz wiadomość: </p>
+                        <p align="center"><form:textarea path="content"/><form:errors path="content"/></p>
 
-<form:form modelAttribute="messageForm" method="post">
-<p>Wprowadz wiadomość: <form:textarea path="content"/><form:errors path="content"/></p>
 
+                        <p align="center">Wybierz adresata:</p><p align="center"> <form:select path="receiverId" required="true"
+                                                                         items="${receivers}"
+                                                                         itemLabel="fullname" itemValue="id">
+                        </form:select><form:errors path="receiverId"/></p>
 
-<p>Wybierz adresata: <form:select path="receiverId" required="true" items="${receivers}"
-                                                 itemLabel="fullname" itemValue="id">
-</form:select><form:errors path="receiverId"/></p>
-
-<form:hidden path="senderId" value="${sessionScope['memberId']}"/>
-<%--<form:hidden path="date" value="${sessionScope['']}"/>--%>
-<p><input type="submit" value="Wyslij Wiadomosc"/></p>
-</form:form>
+                        <form:hidden path="senderId" value="${sessionScope['memberId']}"/>
+                        <%--<form:hidden path="date" value="${sessionScope['']}"/>--%>
+                        <p align="center"><input type="submit" value="Wyslij Wiadomosc"/></p>
+                    </form:form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<footer class="page-footer font-small">
+    <jsp:include page="fragments/footer.jsp"/>
+</footer>
 </body>
 </html>

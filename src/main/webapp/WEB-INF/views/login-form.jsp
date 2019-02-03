@@ -5,10 +5,17 @@
 <html>
 <head>
     <title>Logowanie</title>
+    <style>
+        body{background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/Trump_Golf_Course_%283297216129%29.jpg")
+            background-repeat:no-repeat;
+            background-size:cover;;
+        }
+
+    </style>
 </head>
 <body>
 <jsp:include page="fragments/menu.jsp"/>
-<div>
+<div align="center">
     <h3>Zaloguj się</h3>
     <div>
         <form:form modelAttribute="loginFormDto" method="post" action="/login">
@@ -21,5 +28,8 @@
         </form:form>
     </div>
 </div>
+<footer class="page-footer font-small">
+    <jsp:include page="fragments/footer.jsp"/>
+</footer>
 </body>
 </html>
