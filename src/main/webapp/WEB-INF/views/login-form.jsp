@@ -6,9 +6,9 @@
 <head>
     <title>Logowanie</title>
     <style>
-        body{background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/Trump_Golf_Course_%283297216129%29.jpg")
+        body{background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/Trump_Golf_Course_%283297216129%29.jpg");
             background-repeat:no-repeat;
-            background-size:cover;;
+            background-size:cover;
         }
 
     </style>
