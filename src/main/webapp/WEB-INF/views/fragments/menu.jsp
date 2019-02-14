@@ -33,27 +33,44 @@
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
                     <a class="nav-link color-header" href="/register" style="text-decoration:none">Rejestracja</a>
                 </li>
-                <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
-                    <a class="nav-link color-header" href="/reservation" style="text-decoration:none">Zarezerwuj Dolek</a>
-                </li>
+
+                <sec:authorize access="isAuthenticated()">
+                    <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px"
+                        class="nav-item ml-4">
+                        <a class="nav-link color-header" href="/reservation" style="text-decoration:none">Zarezerwuj Dolek</a>
+                    </li>
+                </sec:authorize>
+
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
                     <a class="nav-link color-header" href="/contact" style="text-decoration:none">Kontakt</a>
                 </li>
                 <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
                     <a class="nav-link color-header" href="/news" style="text-decoration:none">Aktualnosci</a>
                 </li>
-                <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px" class="nav-item ml-4">
-                    <a class="nav-link color-header" href="/message" style="text-decoration:none">Message</a>
-                </li>
+
+                <sec:authorize access="isAuthenticated()">
+                    <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px"
+                        class="nav-item ml-4">
+                        <a class="nav-link color-header" href="/message" style="text-decoration:none">Message</a>
+                    </li>
+                </sec:authorize>
+
+                <sec:authorize access="isAuthenticated()">
+                    <li style="display: inline-block; border: 2px solid rebeccapurple; padding: 5px"
+                        class="nav-item ml-4">
+                        <a class="nav-link color-header" href="/mymessages"
+                           style="text-decoration:none">My messages</a>
+                    </li>
+                </sec:authorize>
 
             </ol>
 
             <ul class="right">
                 <sec:authorize access="!isAuthenticated()">
-                    <li><a href="/login">Zaloguj</a> </li>
+                    <li><a href="/login">Zaloguj</a></li>
                 </sec:authorize>
                 <sec:authorize access="isAuthenticated()">
-                    <li><a href="/logout">Wyloguj</a> </li>
+                    <li><a href="/logout">Wyloguj</a></li>
                 </sec:authorize>
             </ul>
         </div>

@@ -12,6 +12,20 @@
 <html>
 <head>
     <title>Lista wiadomosci Członka:</title>
+    <style>
+        body {
+            background-image: url("http://irishgolfbreaks.com/site/assets/files/1133/mktdrv_070301_012rgb.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bunker {
+            background-color: rgba(149, 172, 223, 0.49);
+            border-radius: 15px;
+            width: 400px;
+        }
+
+    </style>
 </head>
 <body>
 <header>
@@ -38,6 +52,33 @@
 
     </div>
 </header>
+<div align="center">
+    <table class="bunker">
+        <h2 style="color: floralwhite">Wiadomości otrzymane: </h2>
+        <c:forEach items="${messagesReceived}" var="messagesReceived">
+            <div style="background-color: rgba(194,192,223,0.39)">
+                <div align="center">
+                    <h5 style="color: floralwhite">[${messagesReceived.date}] by:${messagesReceived.sender.fullname}
+                        to:${messagesReceived.receiver.fullname}:</h5>
+                    <p style="color: floralwhite">${messagesReceived.content}</p>
+                    <hr/>
+                </div>
+            </div>
+        </c:forEach>
+        <h2 style="color: floralwhite">Wiadomości wysłane: </h2>
+        <c:forEach items="${messagesSent}" var="messagesSent">
+            <div style="background-color: rgba(194,192,223,0.39)">
+                <div align="center">
+                    <h5 style="color: floralwhite">[${messagesSent.date}] by:${messagesSent.sender.fullname} <br>
+                        to:${messagesSent.receiver.fullname}:
+                    </h5>
+                    <p style="color: floralwhite">${messagesSent.content}</p>
+                    <hr/>
+                </div>
+            </div>
+        </c:forEach>
+    </table>
+</div>
 <footer class="page-footer font-small">
     <jsp:include page="fragments/footer.jsp"/>
 </footer>
