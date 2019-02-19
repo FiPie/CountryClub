@@ -19,9 +19,9 @@
         }
 
         body {
-            background-image: url("https://www.gannett-cdn.com/-mm-/71c3358530835ce4d9fa490ed3a589f1a9d123e6/c=0-86-1697-1045/local/-/media/2016/07/28/Naples/Naples/636053268414765556-iStock-83659159-MEDIUM.jpg?width=3200&height=1680")
+            background-image: url("https://www.gannett-cdn.com/-mm-/71c3358530835ce4d9fa490ed3a589f1a9d123e6/c=0-86-1697-1045/local/-/media/2016/07/28/Naples/Naples/636053268414765556-iStock-83659159-MEDIUM.jpg?width=3200&height=1680");
             background-repeat:no-repeat;
-            background-size:cover;;
+            background-size:cover;
         }
     </style>
 </head>

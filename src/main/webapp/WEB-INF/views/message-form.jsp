@@ -48,7 +48,6 @@
                         </form:select><form:errors path="receiverId"/></p>
 
                         <form:hidden path="senderId" value="${sessionScope['memberId']}"/>
-                        <%--<form:hidden path="date" value="${sessionScope['']}"/>--%>
                         <p align="center"><input type="submit" value="Wyslij Wiadomosc"/></p>
                     </form:form>
                 </td>
